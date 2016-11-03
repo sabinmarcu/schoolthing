@@ -1,0 +1,61 @@
+article.site--header-content
+    position: absolute
+    left: 0
+    bottom: 0px
+    margin: 0 0 0 25px
+    padding: 0 0 ($header-content-background-offset * 2) 0
+    z-index: 2
+    h1, h4
+        margin: 0
+        padding: 2.5px 0
+        font-weight: bold
+    h1
+        font-size: 3.5rem
+        padding: 3.5px 0 5.5px
+        text-transform: uppercase
+    h4
+        font-size: 1.4rem
+
+.site--header-content--background,
+.site--header-content--background::before,
+.site--header-content--background::after
+    position: absolute
+    content: ""
+    top: 0
+    bottom: 0
+    left: -20%
+    right: -20%
+    z-index: -1
+    border-radius: 2px
+
+.site--header-content--background
+    transform: skewX(-30deg)
+
+.site--header-content--background::before
+    background: #0f8aa9
+
+.site--header-content--background::after
+    background: #14b7e0
+    transform: translateY(-$header-content-background-offset) translateX(-$header-content-background-offset)
+
+.site--header.profile
+    .editprofile
+        background: #578eb5
+        color: white
+        display: inline-block
+        float: right
+        border-radius: 7px
+        cursor: pointer
+        font-size: 1.5rem
+        padding: 5px 15px
+        vertical-align: middle
+        margin: 15px
+    h4
+        font-size: 1rem
+        font-weight: 400
+    .site--header-content--background
+        transform: none
+        background: rgba(0, 0, 0, $header-nav-opacity)
+        &::before, &::after
+            background: transparent
+            transform: none

@@ -1,0 +1,89 @@
+.site--itemlist
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    flex-flow: row wrap
+
+.site--project, .site--contributor
+    display: inline-block
+    min-width: 150px
+    max-width: 300px
+    overflow: hidden
+    border-radius: 7px
+    border: solid 2px black
+    margin: 10px
+
+.site--project
+    header
+        overflow: hidden
+        position: relative
+        .badge
+            position: absolute
+            right: 5px
+            bottom: 5px
+            background: $color-red
+        img
+            max-width: 100%
+            max-height: 100%
+    footer
+        h1, h4, p, div
+            margin: 5px
+            padding: 0
+            font-size: 1rem
+        h1
+            font-size: 1.8rem
+            font-weight: 800
+            text-transform: uppercase
+        h4
+            font-size: 1rem
+            font-weight: 400
+            .mdi
+                font-size: 1.8rem
+                vertical-align: middle
+    @each $category in $categories
+        &.#{$category}
+            border-color: map-get($categoryMap, $category)
+            h4
+                color: map-get($categoryMap, $category)
+
+.site--newproject
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-flow: column nowrap
+    color: white
+    background: #38af4f
+    border-color: #38af4f
+    padding: 15px
+    h1
+        text-align: center
+        margin: 15px
+        text-transform: uppercase
+        font-size: 3.2rem
+        .mdi
+            font-size: 2.5em
+
+.site--contributor
+    border: none
+    header
+        text-align: center
+        p
+            font-size: 1rem
+        h1
+            margin: 5px
+            padding: 0
+            font-size: 2rem
+            .mdi
+                color: #e88818
+                font-size: 2.5rem
+            &.lastname
+                text-transform: uppercase
+        img.avatar
+            width: 150px
+            height: 150px
+            margin: 10px
+            border-radius: 100%
+            border: solid 2px #3b97d3
+    footer
+        display: flex
+        justify-content: space-around

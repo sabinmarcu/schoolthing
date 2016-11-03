@@ -1,0 +1,21 @@
+nav.sitenav--nav
+    .container
+        input(class="functional-hidden sitenav--showhide" id="sitenav--showhide" type="checkbox")
+        .sitenav--background
+        .sitenav--logo
+            img(src="images/logo.png")
+        .sitenav--content
+            .sitenav--menu
+                .item
+                    a.active create
+                .item
+                    a(href="/") browse
+                .item
+                    a about us
+            .sitenav--admin
+                .item
+                    a(href="/myprofile.html") Register
+                    | /
+                    a(href="/myprofile.html") Log In
+        label(for="sitenav--showhide").sitenav--menu-button
+            .mdi.mdi-menu

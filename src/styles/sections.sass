@@ -1,0 +1,47 @@
+section.site-section
+    background: white
+    padding: 5px
+    border-top: solid 1px black
+    &:first-of-type
+        border-top: none
+    &::after, &::before
+        content: ""
+        display: block
+        margin: 25px auto
+        width: 75px
+        border-top: solid 1px #CCC
+
+.site-section--title
+    text-align: center
+    text-transform: uppercase
+    @each $category in $categories
+        &.#{$category}
+            color: map-get($categoryMap, $category)
+
+.site-categorylist
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: center
+    .item
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 5px 7px
+        border: solid 2px black
+        border-radius: 7px
+        margin: 5px
+        text-transform: uppercase
+        cursor: pointer
+        transition: all 0.3s $animation-curve-default
+        @each $category in $categories
+            &.#{$category}
+                color: map-get($categoryMap, $category)
+                border-color: map-get($categoryMap, $category)
+                &:hover, &.active
+                    color: white
+                    background-color: map-get($categoryMap, $category)
+                    text-decoration: none

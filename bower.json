@@ -1,0 +1,21 @@
+{
+  "name": "unithing",
+  "version": "0.0.0",
+  "dependencies": {
+    "mdi": "^1.7.22",
+    "breakpoint-sass": "^2.7.0",
+    "bootstrap-sass": "^3.3.7"
+  },
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

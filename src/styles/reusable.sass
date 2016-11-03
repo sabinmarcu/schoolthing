@@ -1,0 +1,59 @@
+@import "variables"
+
+// General
+
+.light
+    font-weight: 100
+
+.normal
+    font-weight: 400
+
+.bold
+    font-weight: 800
+
+.functional-hidden
+    transform: translateX(-10000px)
+
+.badge
+    font-size: 1.6rem
+    height: 2.4rem
+    width: 2.4rem
+    color: white
+    display: flex
+    cursor: pointer
+    align-items: center
+    justify-content: center
+    border-radius: 100%
+    &.red, .red &
+        background: $color-red
+    &.blue, .blue &
+        background: $color-blue
+    &.green, .green &
+        background: $color-green
+
+.red
+    color: $color-red
+
+.blue
+    color: $color-blue
+
+.green
+    color: $color-green
+
+.site--progressbar
+    display: flex
+    align-items: center
+    .site-progressbar-percent
+        flex: 1
+        color: green
+    .site--progressbar-container
+        flex: 10
+        border-radius: 7px
+        height: 15px
+        border: solid 1px #aaa
+        background: #ddd
+        overflow: hidden
+        .site--progressbar-progress
+            margin: 0
+            background: $color-green
+            height: 100%
